@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <!-- <link rel="stylesheet" href="css/index.css"> -->
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <title>TodoList App</title>
+    </head>
+    <body>
+        <div data-role="page">
+            <header class="h-[80px] rounded-b-2xl bg-blue-600 justify-center flex items-center">
+              <h1 class="title text-white text-lg uppercase">TodoList App</h1>
+            </header>
+
+            <div data-role="main" class="ui-content">
+                <label for="task">Ajouter une tâche</label>
+                <input type="text" id="task" placeholder="Nouvelle tâche" autofocus>
+                <input type="button" value="Ajouter" onclick="ajouterTache()">
+                <input type="button" value="Réinitialiser" onclick="reinitialiser()">
+
+                <div data-role="header">
+                    <h1 class="title">En cours</h1>
+                </div>
+                <ul id="taskListOngoing" data-role="listview" data-inset="true"></ul>
+
+                <div data-role="header">
+                    <h1 class="title">Terminée(s)</h1>
+                </div>
+                <ul id="taskListDone" data-role="listview" data-inset="true"></ul>
+            </div>
+        </div>
+    </body>
+</html>
+ 
